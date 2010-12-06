@@ -1,0 +1,9 @@
+[alias]
+	co = checkout
+ci = commit
+rb = rebase
+[user]
+	name = Chris Cykana
+	email = cmykna@gmail.com
+[core]
+	editor = mate -w

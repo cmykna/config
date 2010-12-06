@@ -1,0 +1,12 @@
+require 'autotest/growl'
+require 'autotest/fsevent'
+
+# Run stuff in spec/requests directory
+Autotest.add_hook :initialize do |autotest|
+  autotest.add_mapping(/^spec\/requests\/.*_spec\.rb$/) do
+    autotest.files_matching(/^spec\/requests\/.*_spec\.rb$/)
+  end
+  autotest.add_mapping(/^spec\/controllers\/.*_spec\.rb$/) do
+    autotest.files_matching(/^spec\/controllers\/.*_spec\.rb$/)
+  end
+end
